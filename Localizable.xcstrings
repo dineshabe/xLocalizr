@@ -1,0 +1,85 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Address" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TAddress"
+          }
+        },
+        "fr-CA" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "FAddress"
+          }
+        }
+      }
+    },
+    "Critical" : {
+
+    },
+    "Hello, World!" : {
+
+    },
+    "Home" : {
+
+    },
+    "Inspection Date" : {
+
+    },
+    "Latest Inspection report" : {
+
+    },
+    "List" : {
+
+    },
+    "Manual Search" : {
+
+    },
+    "Map" : {
+
+    },
+    "No Reports" : {
+
+    },
+    "Nothing to see here yet—try changing the search text" : {
+
+    },
+    "Nothing to see here yet—try changing the search text or please try manual search" : {
+
+    },
+    "Observation" : {
+
+    },
+    "Older Inspection report" : {
+
+    },
+    "Phone" : {
+
+    },
+    "Reports" : {
+
+    },
+    "Response" : {
+
+    },
+    "Search" : {
+
+    },
+    "Search for a restaurant" : {
+
+    },
+    "Status" : {
+
+    },
+    "This facility does not have any reports to view." : {
+
+    },
+    "Unable to load reports at this time for this facility. Please try again later." : {
+
+    }
+  },
+  "version" : "1.0"
+}
