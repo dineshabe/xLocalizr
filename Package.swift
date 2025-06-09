@@ -5,10 +5,27 @@ import PackageDescription
 
 let package = Package(
     name: "xLocalizr",
+    platforms: [
+        .macOS(.v13)
+    ],
+    products: [
+        .executable(name: "xLocalizr-cli", targets: ["xLocalizr-cli"]),
+        .executable(name: "xLocalizr-macOS", targets: ["xLocalizr-macOS"])
+    ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
+        .target(
+            name: "Shared",
+            path: "Sources/Shared"
+        ),
         .executableTarget(
-            name: "xLocalizr"),
+            name: "xLocalizr-cli",
+            dependencies: ["Shared"],
+            path: "Sources/Command"
+        ),
+        .executableTarget(
+            name: "xLocalizr-macOS",
+            dependencies: ["Shared"],
+            path: "Sources/App"
+        )
     ]
 )

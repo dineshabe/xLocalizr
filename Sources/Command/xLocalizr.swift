@@ -1,8 +1,8 @@
 import Foundation
+import Shared
 
 @main
 struct XLocalizrTool {
-    
     
   static func main() {
       

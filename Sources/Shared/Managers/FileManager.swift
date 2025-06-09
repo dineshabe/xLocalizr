@@ -1,6 +1,8 @@
 import Foundation
 
-struct FileManager {
+public struct FileManager {
+    public init() {}
+    
     func readFile(_ fileName: String) throws -> StringCatalog? {
         
         guard !fileName.isEmpty else { throw FileError.badFileName }
@@ -17,10 +19,12 @@ struct FileManager {
     }
 }
 
-struct StringCatalogManager {
+public struct StringCatalogManager {
+    public init() {}
+    
     let fileManager = FileManager()
     
-    func fetch(fileName: String, language: String) -> [String: String]{
+    public func fetch(fileName: String, language: String) -> [String: String]{
         do {
             if let catalog = try fileManager.readFile(fileName) {
                 return parse(catalog, language: language)
@@ -40,7 +44,7 @@ struct StringCatalogManager {
         return [:]
     }
     
-    func parse(_ catalog: StringCatalog, language: String) -> [String: String] {
+    public func parse(_ catalog: StringCatalog, language: String) -> [String: String] {
         var result = [String: String]()
         
         for item in catalog.strings {
@@ -54,8 +58,10 @@ struct StringCatalogManager {
     }
 }
 
-struct OutputStream {
-    func write(_ outputValue: [String: String]) {
+public struct OutputStream {
+    public init() {}
+    
+    public func write(_ outputValue: [String: String]) {
         let sortedResult = outputValue.sorted { $0.key < $1.key }
         for (key, value) in sortedResult {
             print("\(key) = \(value)")

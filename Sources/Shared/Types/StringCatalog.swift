@@ -8,21 +8,21 @@
 import Foundation
 
 // MARK: - StringCatalog
-struct StringCatalog: Codable {
+public struct StringCatalog: Codable {
     let sourceLanguage: String
     let strings: [String: LocalizedString]
     let version: String
 }
 
-struct LocalizedString: Codable {
+public struct LocalizedString: Codable {
     let localizations: [String: Localization]?
 }
 
-struct Localization: Codable {
+public struct Localization: Codable {
     let stringUnit: StringUnit
 }
 
-struct StringUnit: Codable {
+public struct StringUnit: Codable {
     let state: String
     let value: String
 }
